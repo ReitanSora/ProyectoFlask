@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stiven Pilca</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}" />
+  </head>
+
+  <body>
+    <!--Introduccion-->
+    <header id="start">
+      <h1>
+        <center>Películas</center>
+      </h1>
+    </header>
+    <p>
+      En esta página web encontrarás información corta acerca de algunas películas, entre esta información estará el título, imágen y año de estreno, además tendrás la posiblidad de solicitar que se
+      agregue una película que desees rellenando la información solicitada en el formulario de la parte de abajo.<br /><br />
+      También podrás encontrar el contenido separado por categorías.
+    </p>
+
+    <!--Tabla de contenidos-->
+    <h2 class="title" id="index">Tabla de contenidos</h2>
+    <ul class="content-list">
+      <a href="#category-accion">
+        <li>Acción</li>
+      </a>
+      <a href="#category-animacion">
+        <li>Animación</li>
+      </a>
+      <a href="#category-cienciaficcion">
+        <li>Ciencia Ficción</li>
+      </a>
+      <a href="#category-comedia">
+        <li>Comedia</li>
+      </a>
+      <a href="#category-drama">
+        <li>Drama</li>
+      </a>
+      <a href="#suggest">
+        <li>Sugerencias</li>
+      </a>
+    </ul>
+
+    <!--Peliculas-->
+    <h2 id="category-accion" class="subtitle">Acción</h2>
+    <p class="description">
+      El llamado cine de acción es un género cinematográfico donde prima la espectacularidad de las imágenes por medio de efectos especiales de estilo "clásico". La denominación es más un
+      convencionalismo popular, que un género cinematográfico puro acuñado por críticos, estudiosos o cineastas.
+    </p>
+
+    <div class="movie-container">
+      <h3 class="movie-title">Extraction<br />2020</h3>
+      <div class="movie-container-element">
+        <img class="movie-img" src="{{url_for('static', filename='img/extraction.jpg')}}" />
+        <p class="movie-description">Tyler Rake, un intrépido mercenario, es enviado a Bangladesh por un poderoso mafioso encarcelado para que salve a su hijo secuestrado.</p>
+        <a class="movie-link" href="https://www.netflix.com/ec/title/80230399" target="_blank">
+          <img src="{{url_for('static', filename='img/logo-netflix.png')}}" />
+        </a>
+      </div>
+    </div>
+
+    <h2 id="category-animacion" class="subtitle">Animación</h2>
+    <p class="description">El cine de animación es una categoría de cine que se caracteriza por no recurrir a la técnica del rodaje de imágenes reales sino a una o más técnicas de animación.</p>
+
+    <div class="movie-container">
+      <h3 class="movie-title">Spiderman - Across the Spiderverse<br />2023</h3>
+      <div class="movie-container-element">
+        <img class="movie-img" src="{{url_for('static', filename='img/acrossthespiderverse.jpg')}}" />
+        <p class="movie-description">
+          Después de reunirse con Gwen Stacy, el amigable vecino de tiempo completo de Brooklyn Spiderman, es lanzado a través del multiverso, donde se encuentra a un equipo de gente araña encomendada
+          con proteger su mera existencia.
+        </p>
+        <a class="movie-link" href="https://www.primevideo.com/-/es/detail/Spider-Man-A-Trav%C3%A9s-Del-Spider-Verso/0N7EAU0Y85VI5OO04TYKSXL85T" target="_blank"
+          ><img src="{{url_for('static', filename='img/logo-amazonprime.png')}}" />
+        </a>
+      </div>
+    </div>
+
+    <h2 id="category-cienciaficcion" class="subtitle">Ciencia Ficción</h2>
+    <p class="description">
+      El cine de ciencia ficción es un género cinematográfico, trasunto del género literario, que utiliza la ciencia para fundamentar narraciones con representaciones especulativas de fenómenos
+      imaginarios como extraterrestres, planetas alienígenas y viajes en el tiempo o en el espacio exterior, a menudo con elementos tecnológicos como naves espaciales futuristas, robots y otros
+      artefactos más o menos inspirados en las posibilidades de la ciencia.
+    </p>
+
+    <div class="movie-container">
+      <h3 class="movie-title">Al Filo del Mañana<br />2014</h3>
+      <div class="movie-container-element">
+        <img class="movie-img" src="{{url_for('static', filename='img/alfilodel.jpg')}}" />
+        <p class="movie-description">
+          William Cage, un soldado muerto en acción mientras combatía contra unos alienígenas que invadieron la Tierra, entra en un bucle temporal en el cual revive constantemente y vuelve a intentar
+          salvar el planeta, mejorando sus habilidades, conociendo mejor al enemigo, y acercándose cada vez más a la victoria. Sin embargo, el tiempo corre en su contra.
+        </p>
+        <a class="movie-link" href="https://www.primevideo.com/-/es/detail/Al-Filo-del-Ma%C3%B1ana/0NPZLB8RIELZ67AVT3NHK346BE" target="_blank">
+          <img src="{{url_for('static', filename='img/logo-amazonprime.png')}}" />
+        </a>
+      </div>
+    </div>
+
+    <h2 id="category-comedia" class="subtitle">Comedia</h2>
+    <p class="description">
+      Son películas que te hacen reír. Se caracterizan por ser alegres y diseñadas para divertir y provocar en el espectador una risa contagiosa que les lleve a evadirse del mundo real.
+    </p>
+
+    <div class="movie-container">
+      <h3 class="movie-title">Forrest Gump<br />1994</h3>
+      <div class="movie-container-element">
+        <img class="movie-img" src="{{url_for('static', filename='img/forrestgump.jpg')}}" />
+        <p class="movie-description">
+          Sentado en un banco en Savannah, Georgia, Forrest Gump espera al autobús. Mientras éste tarda en llegar, el joven cuenta su vida a las personas que se sientan a esperar con él. Aunque sufre
+          un pequeño retraso mental, esto no le impide hacer cosas maravillosas. Sin entender del todo lo que sucede a su alrededor, Forrest toma partido en los eventos más importantes de la historia
+          de los Estados Unidos.
+        </p>
+        <a class="movie-link" href="https://www.primevideo.com/-/es/detail/Forrest-Gump/0NHF7IFLIDER9XNBFBK2HLMQXC" target="_blank">
+          <img src="{{url_for('static', filename='img/logo-amazonprime.png')}}" />
+        </a>
+      </div>
+    </div>
+
+    <h2 id="category-drama" class="subtitle">Drama</h2>
+    <p class="description">
+      El cine dramático se basa principalmente en el conflicto entre diferentes protagonistas. Los escenarios son oscuros y los personajes algo serios. Se dice que es uno de los géneros
+      cinematográficos más extenso y diverso.
+    </p>
+
+    <div class="movie-container">
+      <h3 class="movie-title">Seven<br />1995</h3>
+      <div class="movie-container-element">
+        <img class="movie-img" src="{{url_for('static', filename='img/seven.jpg')}}" />
+        <p class="movie-description">
+          Dos detectives, uno a punto de jubilarse y otro novato, investigan una misteriosa serie de asesinatos que tienen como motivo los siete pecados capitales: gula, pereza, codicia, orgullo,
+          lujuria, envidia e ira. Además de involucrarse en las pesquisas, los investigadores descubrirán que ellos también son víctimas de este misterioso e inteligente asesino serial personificado
+          por Kevin Spacey. El ambiente lluvioso y húmedo, además de los tonos grises y marrones del vestuario y la escenografía, plantean una estética de policial negro, con detectives de impermeable
+          y gorros constantes.
+        </p>
+        <a class="movie-link" href="https://www.hbomax.com/ec/es/feature/urn:hbo:feature:GX0_KAgpf77CttQEAAAJc?countryRedirect=1" target="_blank">
+          <img src="{{url_for('static', filename='img/logo-hbomax.png')}}" />
+        </a>
+      </div>
+    </div>
+
+    <!--Enlace para regresar al indice-->
+    <a class="arrow" href="#start">
+      <img src="{{url_for('static', filename='img/arrowup.png')}}" />
+    </a>
+
+    <!--Formulario de sugerencias-->
+    <h2 class="title" id="suggest">Sugerir una película</h2>
+    <form>
+      <label>Nombre: </label>
+      <input class="text-input" type="text" placeholder="Ingrese su nombre" />
+
+      <label>Correo electrónico: </label>
+      <input class="text-input" type="text" placeholder="Ingrese su correo electrónico" />
+
+      <label>Nombre Pelicula: </label>
+      <input class="text-input" type="text" placeholder="Ingrese el nombre de la película" />
+
+      <input class="button" type="submit" value="Sugerir" />
+      <input class="button" type="reset" value="Limpiar" />
+    </form>
+
+    <footer>
+      <p>&copy; 2024 - Stiven Pilca - Desarrollo de Sistemas de  Información</p>
+    </footer>
+  </body>
+</html>
